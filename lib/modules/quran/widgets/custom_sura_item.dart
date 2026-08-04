@@ -26,7 +26,7 @@ class CustomSuraItem extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(image: Assets.images.imgSurNumberFrame.provider())
             ),
-            child: Text("${suraDataModel.suraNamber}", style: them.textTheme.titleLarge?.copyWith(color: Colors.white,fontSize: 15),),
+            child: Text("${suraDataModel.suraNumber}", style: them.textTheme.titleLarge?.copyWith(color: Colors.white,fontSize: 15),),
           ),
           Gap(24),
           Column(
