@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+
+import '../../core/gen/assets.gen.dart';
+import '../../core/them/app_color.dart';
+
+class HadithScreen extends StatelessWidget {
+  const HadithScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(image: Assets.images.hadithBackground.provider(), fit: BoxFit.cover),
+      ),
+    );
+
+  }
+}
