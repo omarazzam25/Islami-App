@@ -77,6 +77,10 @@ class $AssetsImagesGen {
   AssetGenImage get headerImg =>
       const AssetGenImage('assets/images/header_img.png');
 
+  /// File path: assets/images/img_sur_number_frame.png
+  AssetGenImage get imgSurNumberFrame =>
+      const AssetGenImage('assets/images/img_sur_number_frame.png');
+
   /// File path: assets/images/mosque_card_radio.png
   AssetGenImage get mosqueCardRadio =>
       const AssetGenImage('assets/images/mosque_card_radio.png');
@@ -84,6 +88,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/mosque_img.png
   AssetGenImage get mosqueImg =>
       const AssetGenImage('assets/images/mosque_img.png');
+
+  /// File path: assets/images/most_recent_img.png
+  AssetGenImage get mostRecentImg =>
+      const AssetGenImage('assets/images/most_recent_img.png');
 
   /// File path: assets/images/quran_Background.png
   AssetGenImage get quranBackground =>
@@ -104,14 +112,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/sebha_background.png
   AssetGenImage get sebhaBackground =>
       const AssetGenImage('assets/images/sebha_background.png');
-
-  /// File path: assets/images/sebha_body 1.png
-  AssetGenImage get sebhaBody1 =>
-      const AssetGenImage('assets/images/sebha_body 1.png');
-
-  /// File path: assets/images/sebha_body_2.png
-  AssetGenImage get sebhaBody2 =>
-      const AssetGenImage('assets/images/sebha_body_2.png');
 
   /// File path: assets/images/sebha_edit.png
   AssetGenImage get sebhaEdit =>
@@ -134,15 +134,15 @@ class $AssetsImagesGen {
     bearishImg,
     hadithBackground,
     headerImg,
+    imgSurNumberFrame,
     mosqueCardRadio,
     mosqueImg,
+    mostRecentImg,
     quranBackground,
     quranImg,
     radioBackground,
     radioImg,
     sebhaBackground,
-    sebhaBody1,
-    sebhaBody2,
     sebhaEdit,
     splashImg,
     timeBackground,
