@@ -15,7 +15,7 @@ class CustomSuraItem extends StatelessWidget {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: (){
-        Navigator.pushNamed(context, AppRoutesName.quranDeitels);
+        Navigator.pushNamed(context, AppRoutesName.quranDeitels,);
       },
       child: Row(
         children: [
@@ -34,7 +34,7 @@ class CustomSuraItem extends StatelessWidget {
             children: [
               Text(suraDataModel.suraNameEn, style: them.textTheme.titleLarge?.copyWith( color: Colors.white)),
               Gap(10),
-              Text("${suraDataModel.versesCount}", style: them.textTheme.titleLarge?.copyWith( color: Colors.white,fontSize: 14)),
+              Text("${suraDataModel.versesCount} Verses", style: them.textTheme.titleLarge?.copyWith( color: Colors.white,fontSize: 14)),
             ],
           ),
           Spacer(),
