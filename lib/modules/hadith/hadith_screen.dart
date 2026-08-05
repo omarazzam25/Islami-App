@@ -12,6 +12,14 @@ class HadithScreen extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(image: Assets.images.hadithBackground.provider(), fit: BoxFit.cover),
       ),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 70.0,vertical: 30),
+            child: Assets.images.headerImg.image(),
+          )
+        ],
+      ),
     );
 
   }
