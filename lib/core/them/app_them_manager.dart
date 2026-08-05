@@ -6,10 +6,19 @@ abstract class AppThemManager {
   static  ThemeData getThemData() => ThemeData(
 
     appBarTheme: const AppBarThemeData(
-      surfaceTintColor: Colors.transparent,
-
-      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontWeight: FontWeight.w700,
+        fontFamily: "Janna",
+        fontSize: 20,
+        color: AppColor.primary,
+      ),
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
       elevation: 0,
+        iconTheme: IconThemeData(
+          color: AppColor.primary
+        ),
         systemOverlayStyle:  SystemUiOverlayStyle(
             statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:islami/core/routes/app_routes_name.dart';
 import 'package:islami/core/widgets/custom_text_form_field.dart';
 import 'package:islami/modules/quran/widgets/custom_sura_item.dart';
 import 'package:islami/modules/quran/widgets/most_recent_card.dart';
@@ -748,7 +749,11 @@ class QuranScreen extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.all(0),
                   itemBuilder: (context, index) {
-                    return CustomSuraItem(suraDataModel: quranSura[index]);
+                    return CustomSuraItem(
+                        onTap: (){
+                          Navigator.pushNamed(context, AppRoutesName.quranDeitels,arguments: quranSura[index]);
+                        },
+                        suraDataModel: quranSura[index]);
                   },
                   separatorBuilder: (context, index) {
                     return Divider(endIndent: 44, indent: 44,);

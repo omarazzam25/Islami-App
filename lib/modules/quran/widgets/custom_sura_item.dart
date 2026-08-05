@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:islami/core/routes/app_routes_name.dart';
 import 'package:islami/models/sura_data_model.dart';
+import 'package:islami/modules/quran/quran_screen.dart';
 import '../../../core/gen/assets.gen.dart';
 
 class CustomSuraItem extends StatelessWidget {
-  const CustomSuraItem({super.key, required this.suraDataModel});
+   CustomSuraItem({super.key, required this.suraDataModel, required this.onTap});
   final SuraDataModel suraDataModel;
+  void Function()? onTap;
 
 
   @override
@@ -14,9 +16,7 @@ class CustomSuraItem extends StatelessWidget {
     final them = Theme.of(context);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onTap: (){
-        Navigator.pushNamed(context, AppRoutesName.quranDeitels,);
-      },
+      onTap: onTap,
       child: Row(
         children: [
           Container(
