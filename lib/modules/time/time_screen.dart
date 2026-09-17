@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami/core/them/app_color.dart';
-
 import '../../core/gen/assets.gen.dart';
 
 class TimeScreen extends StatelessWidget {

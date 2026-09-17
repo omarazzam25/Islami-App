@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/routes/app_routes.dart';
-import 'package:islami/core/routes/app_routes_name.dart';
 import 'package:islami/core/them/app_them_manager.dart';
-import 'package:islami/modules/splash/splash_screen.dart';
+
 
 
 

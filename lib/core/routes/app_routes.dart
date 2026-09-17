@@ -1,10 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:islami/models/sura_data_model.dart';
 import 'package:islami/modules/layout/layout_screen.dart';
-import 'package:islami/modules/quran/quran_screen.dart';
-
 import '../../modules/onboarding/onboard_screen.dart';
-
 import '../../modules/quran/quran_deitels_screen.dart';
 import '../../modules/splash/splash_screen.dart';
 import 'app_routes_name.dart';

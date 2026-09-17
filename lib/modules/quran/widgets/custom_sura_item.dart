@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:islami/core/routes/app_routes_name.dart';
 import 'package:islami/models/sura_data_model.dart';
-import 'package:islami/modules/quran/quran_screen.dart';
 import '../../../core/gen/assets.gen.dart';
 
 class CustomSuraItem extends StatelessWidget {

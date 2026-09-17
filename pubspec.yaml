@@ -37,11 +37,22 @@ dependencies:
   flutter_svg: ^2.3.0
   flutter_gap: ^1.2.0
 
+
 dev_dependencies:
   build_runner: ^2.4.15
   flutter_gen_runner: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  adaptive_icon_background: "#0F2B37"
+  adaptive_icon_foreground: "assets/images/backGround_cropped.png"
+  image_path: "assets/images/backGround_cropped.png"
+  min_sdk_android: 21
 
 
   flutter_lints: ^6.0.0
