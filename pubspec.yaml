@@ -40,6 +40,7 @@ dependencies:
 
   provider: ^6.1.5+1
   audioplayers: 6.5.1
+  carousel_slider: ^5.1.2
 
 
 dev_dependencies:
@@ -84,6 +85,7 @@ flutter:
      - assets/images/
      - assets/icons/
      - assets/files/quran/
+     - assets/files/hadith/
 
 
 

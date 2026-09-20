@@ -72,13 +72,9 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/1789516714515.png
-  AssetGenImage get a1789516714515 =>
-      const AssetGenImage('assets/images/1789516714515.png');
-
-  /// File path: assets/images/1789516800607.png
-  AssetGenImage get a1789516800607 =>
-      const AssetGenImage('assets/images/1789516800607.png');
+  /// File path: assets/images/backGround_cropped.png
+  AssetGenImage get backGroundCropped =>
+      const AssetGenImage('assets/images/backGround_cropped.png');
 
   /// File path: assets/images/bearish_img.png
   AssetGenImage get bearishImg =>
@@ -87,6 +83,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/hadith_background.png
   AssetGenImage get hadithBackground =>
       const AssetGenImage('assets/images/hadith_background.png');
+
+  /// File path: assets/images/hadith_card_backGround.png
+  AssetGenImage get hadithCardBackGround =>
+      const AssetGenImage('assets/images/hadith_card_backGround.png');
 
   /// File path: assets/images/header_img.png
   AssetGenImage get headerImg =>
@@ -158,10 +158,10 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
-    a1789516714515,
-    a1789516800607,
+    backGroundCropped,
     bearishImg,
     hadithBackground,
+    hadithCardBackGround,
     headerImg,
     imgBottomDecoration,
     imgLeftCorner,

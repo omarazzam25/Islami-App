@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2), () => Navigator.pushReplacementNamed(context, AppRoutesName.onboardScreen),);
+    Future.delayed(Duration(seconds: 2), () => Navigator.pushReplacementNamed(context, AppRoutesName.layout),);
   }
 
   @override
