@@ -41,7 +41,7 @@ class _RadioCardItemState extends State<RadioCardItem> {
                     padding: const EdgeInsets.symmetric(vertical: 13.0),
                     child: Column(
                       children: [
-                        Text(widget.name, style: them.textTheme.titleLarge,),
+                        Text(widget.name, style: them.textTheme.titleLarge,textAlign: TextAlign.center , ),
                         Spacer(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
