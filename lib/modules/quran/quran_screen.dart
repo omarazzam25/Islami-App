@@ -734,11 +734,37 @@ class _QuranScreenState extends State<QuranScreen> {
 
   }
 
+  void onSearchChanged(String value){
+    final query = value.trim();
+    setState(() {
+
+      if( query.isEmpty){
+        _filteredList = quranSura;
+
+      }else{
+
+        _filteredList = quranSura.where((sura) {
+          return sura.suraNameEn.toLowerCase().contains(query.toLowerCase()) || sura.suraNameAr.contains(query);
+
+        },).toList();
+      }
+    });
+
+
+
+
+  }
+
+
+  List<SuraDataModel> _filteredList = quranSura;
+
    List<SuraDataModel> _recentlyData = [];
   @override
   Widget build(BuildContext context) {
     final them = Theme.of(context);
     return Container(
+      width: double.infinity,
+      height: double.infinity,
      decoration: BoxDecoration(
        image: DecorationImage(image: Assets.images.quranBackground.provider(), fit: BoxFit.cover),
      ),
@@ -748,7 +774,10 @@ class _QuranScreenState extends State<QuranScreen> {
           children: [
             Assets.images.headerImg.image(),
             Gap(21),
-            CustomTextFormField(),
+            CustomTextFormField(
+              onChange:onSearchChanged ,
+
+            ),
             Gap(20),
             if(_recentlyData.isNotEmpty)
             Padding(
@@ -790,15 +819,15 @@ class _QuranScreenState extends State<QuranScreen> {
                   itemBuilder: (context, index) {
                     return CustomSuraItem(
                         onTap: (){
-                          openSura(quranSura[index]);
+                          openSura(_filteredList[index]);
                         },
-                        suraDataModel: quranSura[index]);
+                        suraDataModel: _filteredList[index]);
                   },
                   separatorBuilder: (context, index) {
                     return Divider(endIndent: 44, indent: 44,);
 
                   },
-                  itemCount: quranSura.length,
+                  itemCount: _filteredList.length,
               ),
             )
 

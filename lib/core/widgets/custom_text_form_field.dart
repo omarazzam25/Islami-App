@@ -4,7 +4,9 @@ import '../gen/assets.gen.dart';
 import '../them/app_color.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({super.key});
+   CustomTextFormField({super.key , this.onChange});
+
+  void Function(String)? onChange ;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: TextFormField(
+        onChanged:  onChange,
         cursorColor: AppColor.primary,
           decoration: InputDecoration(
             hintText: 'Sura Name',
