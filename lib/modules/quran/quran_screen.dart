@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
+import 'package:islami/core/cache/cached_data.dart';
 import 'package:islami/core/routes/app_routes_name.dart';
 import 'package:islami/core/widgets/custom_text_form_field.dart';
 import 'package:islami/modules/quran/widgets/custom_sura_item.dart';
@@ -695,14 +696,75 @@ List<SuraDataModel> quranSura = [
   ),
 ];
 
-class QuranScreen extends StatelessWidget {
+class QuranScreen extends StatefulWidget {
     const QuranScreen({super.key});
 
+  @override
+  State<QuranScreen> createState() => _QuranScreenState();
+}
 
+class _QuranScreenState extends State<QuranScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    loadRecentSura();
+  }
+
+
+  Future<void> loadRecentSura() async{
+
+    final recentNumber = await CashedData.getRecentSura();
+    
+    final result = recentNumber.map((number) => quranSura.firstWhere((sura) => sura.suraNumber == number),).toList();
+    if(!mounted) return;
+    setState(() {
+
+      _recentlyData = result;
+
+    });
+  }
+
+  Future<void> openSura(SuraDataModel suraDataModel ) async{
+
+   await CashedData.addSura(suraDataModel.suraNumber);
+    Navigator.pushNamed(context, AppRoutesName.quranDeitels,arguments: suraDataModel);
+
+   loadRecentSura();
+
+  }
+
+  void onSearchChanged(String value){
+    final query = value.trim();
+    setState(() {
+
+      if( query.isEmpty){
+        _filteredList = quranSura;
+
+      }else{
+
+        _filteredList = quranSura.where((sura) {
+          return sura.suraNameEn.toLowerCase().contains(query.toLowerCase()) || sura.suraNameAr.contains(query);
+
+        },).toList();
+      }
+    });
+
+
+
+
+  }
+
+
+  List<SuraDataModel> _filteredList = quranSura;
+
+   List<SuraDataModel> _recentlyData = [];
   @override
   Widget build(BuildContext context) {
     final them = Theme.of(context);
     return Container(
+      width: double.infinity,
+      height: double.infinity,
      decoration: BoxDecoration(
        image: DecorationImage(image: Assets.images.quranBackground.provider(), fit: BoxFit.cover),
      ),
@@ -712,14 +774,20 @@ class QuranScreen extends StatelessWidget {
           children: [
             Assets.images.headerImg.image(),
             Gap(21),
-            CustomTextFormField(),
+            CustomTextFormField(
+              onChange:onSearchChanged ,
+
+            ),
             Gap(20),
+            if(_recentlyData.isNotEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text('Most Recently',style: them.textTheme.bodyLarge?.copyWith(fontSize: 16),
               ),
             ),
+            if(_recentlyData.isNotEmpty)
             Gap(10),
+            if(_recentlyData.isNotEmpty)
             SizedBox(
               height: 150,
               child: ListView.separated(
@@ -727,12 +795,12 @@ class QuranScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                   itemBuilder:
                   (context, index) {
-                    return MostRecentCard();
+                    return MostRecentCard(suraDataModel: _recentlyData[index],);
                   },
                   separatorBuilder: (context, index) {
                     return SizedBox(width: 10,);
                     },
-                  itemCount: 5
+                  itemCount: _recentlyData.length
               ),
             ),
             Gap(10),
@@ -751,15 +819,15 @@ class QuranScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return CustomSuraItem(
                         onTap: (){
-                          Navigator.pushNamed(context, AppRoutesName.quranDeitels,arguments: quranSura[index]);
+                          openSura(_filteredList[index]);
                         },
-                        suraDataModel: quranSura[index]);
+                        suraDataModel: _filteredList[index]);
                   },
                   separatorBuilder: (context, index) {
                     return Divider(endIndent: 44, indent: 44,);
 
                   },
-                  itemCount: quranSura.length,
+                  itemCount: _filteredList.length,
               ),
             )
 
