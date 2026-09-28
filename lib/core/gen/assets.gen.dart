@@ -17,6 +17,12 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsFilesGen {
   const $AssetsFilesGen();
 
+  /// Directory path: assets/files/azkar
+  $AssetsFilesAzkarGen get azkar => const $AssetsFilesAzkarGen();
+
+  /// Directory path: assets/files/hadith
+  $AssetsFilesHadithGen get hadith => const $AssetsFilesHadithGen();
+
   /// Directory path: assets/files/quran
   $AssetsFilesQuranGen get quran => const $AssetsFilesQuranGen();
 }
@@ -76,9 +82,17 @@ class $AssetsImagesGen {
   AssetGenImage get backGroundCropped =>
       const AssetGenImage('assets/images/backGround_cropped.png');
 
+  /// File path: assets/images/background_pray_time.png
+  AssetGenImage get backgroundPrayTime =>
+      const AssetGenImage('assets/images/background_pray_time.png');
+
   /// File path: assets/images/bearish_img.png
   AssetGenImage get bearishImg =>
       const AssetGenImage('assets/images/bearish_img.png');
+
+  /// File path: assets/images/evening_azkar_img.png
+  AssetGenImage get eveningAzkarImg =>
+      const AssetGenImage('assets/images/evening_azkar_img.png');
 
   /// File path: assets/images/hadith_background.png
   AssetGenImage get hadithBackground =>
@@ -107,6 +121,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_sur_number_frame.png
   AssetGenImage get imgSurNumberFrame =>
       const AssetGenImage('assets/images/img_sur_number_frame.png');
+
+  /// File path: assets/images/morning_azkar_img.png
+  AssetGenImage get morningAzkarImg =>
+      const AssetGenImage('assets/images/morning_azkar_img.png');
 
   /// File path: assets/images/mosque_card_radio.png
   AssetGenImage get mosqueCardRadio =>
@@ -159,7 +177,9 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     backGroundCropped,
+    backgroundPrayTime,
     bearishImg,
+    eveningAzkarImg,
     hadithBackground,
     hadithCardBackGround,
     headerImg,
@@ -167,6 +187,7 @@ class $AssetsImagesGen {
     imgLeftCorner,
     imgRightCorner,
     imgSurNumberFrame,
+    morningAzkarImg,
     mosqueCardRadio,
     mosqueImg,
     mostRecentImg,
@@ -179,6 +200,224 @@ class $AssetsImagesGen {
     splashImg,
     timeBackground,
     welcomeImg,
+  ];
+}
+
+class $AssetsFilesAzkarGen {
+  const $AssetsFilesAzkarGen();
+
+  /// File path: assets/files/azkar/azkar.json
+  String get azkar => 'assets/files/azkar/azkar.json';
+
+  /// List of all assets
+  List<String> get values => [azkar];
+}
+
+class $AssetsFilesHadithGen {
+  const $AssetsFilesHadithGen();
+
+  /// File path: assets/files/hadith/h1.txt
+  String get h1 => 'assets/files/hadith/h1.txt';
+
+  /// File path: assets/files/hadith/h10.txt
+  String get h10 => 'assets/files/hadith/h10.txt';
+
+  /// File path: assets/files/hadith/h11.txt
+  String get h11 => 'assets/files/hadith/h11.txt';
+
+  /// File path: assets/files/hadith/h12.txt
+  String get h12 => 'assets/files/hadith/h12.txt';
+
+  /// File path: assets/files/hadith/h13.txt
+  String get h13 => 'assets/files/hadith/h13.txt';
+
+  /// File path: assets/files/hadith/h14.txt
+  String get h14 => 'assets/files/hadith/h14.txt';
+
+  /// File path: assets/files/hadith/h15.txt
+  String get h15 => 'assets/files/hadith/h15.txt';
+
+  /// File path: assets/files/hadith/h16.txt
+  String get h16 => 'assets/files/hadith/h16.txt';
+
+  /// File path: assets/files/hadith/h17.txt
+  String get h17 => 'assets/files/hadith/h17.txt';
+
+  /// File path: assets/files/hadith/h18.txt
+  String get h18 => 'assets/files/hadith/h18.txt';
+
+  /// File path: assets/files/hadith/h19.txt
+  String get h19 => 'assets/files/hadith/h19.txt';
+
+  /// File path: assets/files/hadith/h2.txt
+  String get h2 => 'assets/files/hadith/h2.txt';
+
+  /// File path: assets/files/hadith/h20.txt
+  String get h20 => 'assets/files/hadith/h20.txt';
+
+  /// File path: assets/files/hadith/h21.txt
+  String get h21 => 'assets/files/hadith/h21.txt';
+
+  /// File path: assets/files/hadith/h22.txt
+  String get h22 => 'assets/files/hadith/h22.txt';
+
+  /// File path: assets/files/hadith/h23.txt
+  String get h23 => 'assets/files/hadith/h23.txt';
+
+  /// File path: assets/files/hadith/h24.txt
+  String get h24 => 'assets/files/hadith/h24.txt';
+
+  /// File path: assets/files/hadith/h25.txt
+  String get h25 => 'assets/files/hadith/h25.txt';
+
+  /// File path: assets/files/hadith/h26.txt
+  String get h26 => 'assets/files/hadith/h26.txt';
+
+  /// File path: assets/files/hadith/h27.txt
+  String get h27 => 'assets/files/hadith/h27.txt';
+
+  /// File path: assets/files/hadith/h28.txt
+  String get h28 => 'assets/files/hadith/h28.txt';
+
+  /// File path: assets/files/hadith/h29.txt
+  String get h29 => 'assets/files/hadith/h29.txt';
+
+  /// File path: assets/files/hadith/h3.txt
+  String get h3 => 'assets/files/hadith/h3.txt';
+
+  /// File path: assets/files/hadith/h30.txt
+  String get h30 => 'assets/files/hadith/h30.txt';
+
+  /// File path: assets/files/hadith/h31.txt
+  String get h31 => 'assets/files/hadith/h31.txt';
+
+  /// File path: assets/files/hadith/h32.txt
+  String get h32 => 'assets/files/hadith/h32.txt';
+
+  /// File path: assets/files/hadith/h33.txt
+  String get h33 => 'assets/files/hadith/h33.txt';
+
+  /// File path: assets/files/hadith/h34.txt
+  String get h34 => 'assets/files/hadith/h34.txt';
+
+  /// File path: assets/files/hadith/h35.txt
+  String get h35 => 'assets/files/hadith/h35.txt';
+
+  /// File path: assets/files/hadith/h36.txt
+  String get h36 => 'assets/files/hadith/h36.txt';
+
+  /// File path: assets/files/hadith/h37.txt
+  String get h37 => 'assets/files/hadith/h37.txt';
+
+  /// File path: assets/files/hadith/h38.txt
+  String get h38 => 'assets/files/hadith/h38.txt';
+
+  /// File path: assets/files/hadith/h39.txt
+  String get h39 => 'assets/files/hadith/h39.txt';
+
+  /// File path: assets/files/hadith/h4.txt
+  String get h4 => 'assets/files/hadith/h4.txt';
+
+  /// File path: assets/files/hadith/h40.txt
+  String get h40 => 'assets/files/hadith/h40.txt';
+
+  /// File path: assets/files/hadith/h41.txt
+  String get h41 => 'assets/files/hadith/h41.txt';
+
+  /// File path: assets/files/hadith/h42.txt
+  String get h42 => 'assets/files/hadith/h42.txt';
+
+  /// File path: assets/files/hadith/h43.txt
+  String get h43 => 'assets/files/hadith/h43.txt';
+
+  /// File path: assets/files/hadith/h44.txt
+  String get h44 => 'assets/files/hadith/h44.txt';
+
+  /// File path: assets/files/hadith/h45.txt
+  String get h45 => 'assets/files/hadith/h45.txt';
+
+  /// File path: assets/files/hadith/h46.txt
+  String get h46 => 'assets/files/hadith/h46.txt';
+
+  /// File path: assets/files/hadith/h47.txt
+  String get h47 => 'assets/files/hadith/h47.txt';
+
+  /// File path: assets/files/hadith/h48.txt
+  String get h48 => 'assets/files/hadith/h48.txt';
+
+  /// File path: assets/files/hadith/h49.txt
+  String get h49 => 'assets/files/hadith/h49.txt';
+
+  /// File path: assets/files/hadith/h5.txt
+  String get h5 => 'assets/files/hadith/h5.txt';
+
+  /// File path: assets/files/hadith/h50.txt
+  String get h50 => 'assets/files/hadith/h50.txt';
+
+  /// File path: assets/files/hadith/h6.txt
+  String get h6 => 'assets/files/hadith/h6.txt';
+
+  /// File path: assets/files/hadith/h7.txt
+  String get h7 => 'assets/files/hadith/h7.txt';
+
+  /// File path: assets/files/hadith/h8.txt
+  String get h8 => 'assets/files/hadith/h8.txt';
+
+  /// File path: assets/files/hadith/h9.txt
+  String get h9 => 'assets/files/hadith/h9.txt';
+
+  /// List of all assets
+  List<String> get values => [
+    h1,
+    h10,
+    h11,
+    h12,
+    h13,
+    h14,
+    h15,
+    h16,
+    h17,
+    h18,
+    h19,
+    h2,
+    h20,
+    h21,
+    h22,
+    h23,
+    h24,
+    h25,
+    h26,
+    h27,
+    h28,
+    h29,
+    h3,
+    h30,
+    h31,
+    h32,
+    h33,
+    h34,
+    h35,
+    h36,
+    h37,
+    h38,
+    h39,
+    h4,
+    h40,
+    h41,
+    h42,
+    h43,
+    h44,
+    h45,
+    h46,
+    h47,
+    h48,
+    h49,
+    h5,
+    h50,
+    h6,
+    h7,
+    h8,
+    h9,
   ];
 }
 
