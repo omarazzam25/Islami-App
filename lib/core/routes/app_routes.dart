@@ -3,6 +3,8 @@ import 'package:islami/modules/layout/layout_screen.dart';
 import '../../modules/onboarding/onboard_screen.dart';
 import '../../modules/quran/quran_deitels_screen.dart';
 import '../../modules/splash/splash_screen.dart';
+import '../../modules/time/evening_azkar_view.dart';
+import '../../modules/time/morning_azkar_view.dart';
 import 'app_routes_name.dart';
 
 abstract class AppRoutes {
@@ -11,5 +13,7 @@ abstract class AppRoutes {
     AppRoutesName.layout: (context) => LayoutScreen(),
     AppRoutesName.onboardScreen: (context) => OnboardScreen(),
      AppRoutesName.quranDeitels: (context) => QuranDeitelsScreen(),
+    AppRoutesName.eveningAzkarView: (context) => EveningAzkarView(),
+    AppRoutesName.morningAzkarView: (context) => MorningAzkarView(),
   };
 }
