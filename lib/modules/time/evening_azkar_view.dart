@@ -54,11 +54,11 @@ class _EveningAzkarViewState extends State<EveningAzkarView> {
                       color: AppColor.black,
                       border: Border.all(color: AppColor.primary,width: 2),
                     ),
-                    child: Text(data[index].content!,textAlign: TextAlign.center, style: them.textTheme.titleLarge?.copyWith(color: AppColor.white),),
+                    child: Text(data[index].content!,textAlign: TextAlign.center, style:them.textTheme.titleLarge?.copyWith(color: AppColor.white,height: 1.5),),
                   ),
                 );
               },
-              separatorBuilder: (context, index) => SizedBox(height: 10,),
+              separatorBuilder: (context, index) => SizedBox(height: 5,),
               itemCount: data.length);
 
         },
