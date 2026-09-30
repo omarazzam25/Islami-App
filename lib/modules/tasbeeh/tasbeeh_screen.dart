@@ -32,70 +32,76 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Container(
-      width:double .infinity,
-      height:double .infinity,
+      width:double.infinity,
+      height:double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: Assets.images.sebhaBackground.provider(),
           fit: BoxFit.cover,
         ),
       ),
-      child: Column(
-        children: [
-          Assets.images.headerImg.image(width: 291, height: 151),
-          Gap(36),
-          Text(
-            'سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
-            style: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w700,
-              fontFamily: "Janna",
-              color: AppColor.secondary,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Assets.images.headerImg.image(width: 291, height: 151),
+            Gap(36),
+            Text(
+              'سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.w700,
+                fontFamily: "Janna",
+                color: AppColor.secondary,
+              ),
             ),
-          ),
-          Gap(16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: GestureDetector(
+            Gap(16),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: GestureDetector(
 
-              onTap: () {
-                _increaseCounter();
-              },
-              child: Stack(
-                alignment: AlignmentGeometry.center,
-                children: [
-                  Transform.rotate(
-                      angle: counter * 0.05,
-                      child: Assets.images.sebhaEdit.image()),
-                  Column(
+                onTap: () {
+                  _increaseCounter();
+                },
+                child: SizedBox(
+                  width: size.width,
+                  child: Stack(
+                    alignment: AlignmentGeometry.center,
                     children: [
-                      Text(
-                        azkar[currentZekrIndex].text,
-                        style: TextStyle(
-                          color: AppColor.secondary,
-                          fontFamily: "Janna",
-                          fontWeight: FontWeight.w700,
-                          fontSize: 30
-                        ),
-                      ),
-                      Gap(15),
-                      Text(
-                        '$counter',
-                        style: TextStyle(
-                          color: AppColor.secondary,
-                          fontFamily: "Janna",
-                          fontWeight: FontWeight.w700,
-                          fontSize: 36,
-                        ),
+                      Transform.rotate(
+                          angle: counter * 0.05,
+                          child: Assets.images.sebhaEdit.image()),
+                      Column(
+                        children: [
+                          Text(
+                            azkar[currentZekrIndex].text,
+                            style: TextStyle(
+                                color: AppColor.secondary,
+                                fontFamily: "Janna",
+                                fontWeight: FontWeight.w700,
+                                fontSize: 30
+                            ),
+                          ),
+                          Gap(size.height * 0.015),
+                          Text(
+                            '$counter',
+                            style: TextStyle(
+                              color: AppColor.secondary,
+                              fontFamily: "Janna",
+                              fontWeight: FontWeight.w700,
+                              fontSize: 36,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
