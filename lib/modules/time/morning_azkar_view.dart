@@ -54,7 +54,15 @@ class _MorningAzkarViewState extends State<MorningAzkarView> {
                         color: AppColor.black,
                         border: Border.all(color: AppColor.primary,width: 2),
                       ),
-                      child: Text(data[index].content!,textAlign: TextAlign.center, style: them.textTheme.titleLarge?.copyWith(color: AppColor.white,height: 1.5),),
+                      child: Column(
+                        children: [
+                          Text(data[index].content!,textAlign: TextAlign.center, style: them.textTheme.titleLarge?.copyWith(color: AppColor.white,height: 1.5),),
+                          Text("( x ${data[index].count!})",textAlign: TextAlign.center, style:them.textTheme.titleLarge?.copyWith(color: AppColor.white,height: 1.5),),
+
+                        ],
+                      ),
+
+
                     ),
                   );
                 },

@@ -59,7 +59,7 @@ class _NextPrayerTimerState extends State<NextPrayerTimer> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Next Pray - ',style: them.textTheme.bodyLarge?.copyWith(color: AppColor.black.withValues(alpha: 0.75)),),
+        Text('Next Prayer - ',style: them.textTheme.bodyLarge?.copyWith(color: AppColor.black.withValues(alpha: 0.75)),),
         Text(_formateDuration(_timeRemaining),style: them.textTheme.bodyLarge?.copyWith(color: AppColor.black)),
       ],
     );
