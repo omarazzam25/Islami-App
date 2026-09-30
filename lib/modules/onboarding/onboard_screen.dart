@@ -8,6 +8,8 @@ import 'package:islami/modules/onboarding/second_screen.dart';
 import 'package:islami/modules/onboarding/third_screen.dart';
 import 'package:islami/modules/onboarding/widget/custom_indicator.dart';
 
+import '../../core/cache/cached_data.dart';
+
 
 
 class OnboardScreen extends StatefulWidget {
@@ -80,7 +82,11 @@ class _OnboardScreenState extends State<OnboardScreen> {
                    ),
                  ),
                 GestureDetector(
-                  onTap:(){
+                  onTap:() async{
+
+                    await CachedData.completeOnboarding();
+
+                    if (!context.mounted) return;
                     if(index == 4){
                       Navigator.pushReplacementNamed(context,AppRoutesName.layout);
                     }else{
