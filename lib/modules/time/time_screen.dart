@@ -234,7 +234,7 @@ class _TimeScreenState extends State<TimeScreen> {
                                 Column(
                                   children: [
                                     Text(
-                                      "Pray Time",
+                                      "Prayer Time",
                                       style: them.textTheme.bodyLarge?.copyWith(
                                         color: AppColor.black.withValues(
                                           alpha: 0.71,
