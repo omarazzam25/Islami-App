@@ -7,40 +7,75 @@ import '../../core/them/app_color.dart';
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+
     return Scaffold(
-      body: Column(
-        children: [
-          Assets.images.headerImg.image(width: 291,height: 171),
-          Gap(50),
-          Assets.images.quranImg.image(),
-          Gap(51),
-          Text('Reading the Quran',
-            style:TextStyle(
-                fontSize: 24,
-                fontWeight:FontWeight.w700,
-                fontFamily: "Janna",
-                color: AppColor.primary
-            ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                width: size.width * 0.70,
+                child: AspectRatio(
+                  aspectRatio: 291 / 171,
+                  child: Assets.images.headerImg.image(
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+              Gap(size.height * 0.05),
+
+              SizedBox(
+                width: size.width * 0.75,
+                child: Assets.images.quranImg.image(
+                  fit: BoxFit.contain,
+                ),
+              ),
+
+              Gap(size.height * 0.05),
+
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.05,
+                ),
+                child: Text(
+                  'Reading the Quran',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: size.width * 0.06,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Janna',
+                    color: AppColor.primary,
+                  ),
+                ),
+              ),
+
+              Gap(size.height * 0.05),
+
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.08,
+                ),
+                child: Text(
+                  'Read, and your Lord is the Most Generous',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: size.width * 0.05,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Janna',
+                    color: AppColor.primary,
+                  ),
+                ),
+              ),
+
+              Gap(size.height * 0.03),
+            ],
           ),
-          Gap(50),
-          Text('Read, and your Lord is the Most Generous',
-            style:TextStyle(
-                fontSize: 20,
-                fontWeight:FontWeight.w700,
-                fontFamily: "Janna",
-                color: AppColor.primary
-            ),
-          ),
-
-
-
-        ],
+        ),
       ),
-
     );
   }
 }

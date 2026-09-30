@@ -9,40 +9,65 @@ class FourthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+
     return Scaffold(
-      body: Column(
-        children: [
-          Assets.images.headerImg.image(width: 291,height: 171),
-          Gap(41),
-          Assets.images.bearishImg.image(),
-          Gap(41),
-          Text('Bearish',
-            style:TextStyle(
-                fontSize: 24,
-                fontWeight:FontWeight.w700,
-                fontFamily: "Janna",
-                color: AppColor.primary
-            ),
-          ),
-          Gap(41),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text('Praise the name of your Lord, the Most High',
-              textAlign: TextAlign.center,
-              style:TextStyle(
-                  fontSize: 20,
-                  fontWeight:FontWeight.w700,
-                  fontFamily: "Janna",
-                  color: AppColor.primary
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                width: size.width * 0.70,
+                child: AspectRatio(
+                  aspectRatio: 291 / 171,
+                  child: Assets.images.headerImg.image(fit: BoxFit.contain),
+                ),
               ),
-            ),
+
+              Gap(size.height * 0.04),
+
+              SizedBox(
+                width: size.width * 0.75,
+                child: Assets.images.bearishImg.image(fit: BoxFit.contain),
+              ),
+
+              Gap(size.height * 0.04),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
+                child: Text(
+                  'Bearish',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: size.width * 0.06,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Janna',
+                    color: AppColor.primary,
+                  ),
+                ),
+              ),
+
+              Gap(size.height * 0.04),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: size.width * 0.08),
+                child: Text(
+                  'Praise the name of your Lord, the Most High',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: size.width * 0.05,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Janna',
+                    color: AppColor.primary,
+                  ),
+                ),
+              ),
+
+              Gap(size.height * 0.03),
+            ],
           ),
-
-
-
-        ],
+        ),
       ),
-
     );
   }
 }
