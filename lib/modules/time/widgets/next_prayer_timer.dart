@@ -52,7 +52,6 @@ class _NextPrayerTimerState extends State<NextPrayerTimer> {
 
   }
 
-
   @override
   Widget build(BuildContext context) {
     final them = Theme.of(context);

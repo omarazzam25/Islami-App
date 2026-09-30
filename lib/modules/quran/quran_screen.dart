@@ -714,7 +714,7 @@ class _QuranScreenState extends State<QuranScreen> {
 
   Future<void> loadRecentSura() async{
 
-    final recentNumber = await CashedData.getRecentSura();
+    final recentNumber = await CachedData.getRecentSura();
     
     final result = recentNumber.map((number) => quranSura.firstWhere((sura) => sura.suraNumber == number),).toList();
     if(!mounted) return;
@@ -727,7 +727,7 @@ class _QuranScreenState extends State<QuranScreen> {
 
   Future<void> openSura(SuraDataModel suraDataModel ) async{
 
-   await CashedData.addSura(suraDataModel.suraNumber);
+   await CachedData.addSura(suraDataModel.suraNumber);
     Navigator.pushNamed(context, AppRoutesName.quranDeitels,arguments: suraDataModel);
 
    loadRecentSura();
