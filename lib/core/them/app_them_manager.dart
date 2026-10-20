@@ -5,6 +5,8 @@ import 'package:islami/core/them/app_color.dart';
 abstract class AppThemManager {
   static  ThemeData getThemData() => ThemeData(
 
+
+
     appBarTheme: const AppBarThemeData(
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -25,6 +27,7 @@ abstract class AppThemManager {
 
       )
     ),
+
 
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColor.primary,
