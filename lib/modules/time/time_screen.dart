@@ -265,62 +265,64 @@ class _TimeScreenState extends State<TimeScreen> {
                               ],
                             ),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(height: 80),
-                              CarouselSlider.builder(
-                                itemCount: prayerTimes.length,
-                                itemBuilder: (context, index, realIndex) {
-                                  return Container(
-                                    width: 95,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topCenter,
-                                        end: Alignment.bottomCenter,
-                                        colors: [AppColor.black, AppColor.gold],
-                                      ),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          prayerTimes.keys
-                                              .elementAt(index)
-                                              .toString(),
-                                          style: them.textTheme.bodyLarge
-                                              ?.copyWith(
-                                                color: AppColor.white,
-                                                fontSize: 16,
-                                              ),
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                SizedBox(height: 80),
+                                CarouselSlider.builder(
+                                  itemCount: prayerTimes.length,
+                                  itemBuilder: (context, index, realIndex) {
+                                    return Container(
+                                      width: 95,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [AppColor.black, AppColor.gold],
                                         ),
-                                        Text(
-                                          DataFormatter.formateTime(
-                                            prayerTimes.values
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            prayerTimes.keys
                                                 .elementAt(index)
                                                 .toString(),
+                                            style: them.textTheme.bodyLarge
+                                                ?.copyWith(
+                                                  color: AppColor.white,
+                                                  fontSize: 16,
+                                                ),
                                           ),
-                                          style: them.textTheme.bodyLarge
-                                              ?.copyWith(
-                                                color: AppColor.white,
-                                                fontSize: 24,
-                                              ),
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                },
-                                options: CarouselOptions(
-                                  height: size.height * 0.15,
-                                  enlargeCenterPage: true,
-                                  enlargeFactor: 0.15,
-                                  viewportFraction: 0.28,
+                                          Text(
+                                            DataFormatter.formateTime(
+                                              prayerTimes.values
+                                                  .elementAt(index)
+                                                  .toString(),
+                                            ),
+                                            style: them.textTheme.bodyLarge
+                                                ?.copyWith(
+                                                  color: AppColor.white,
+                                                  fontSize: 24,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                  options: CarouselOptions(
+                                    height: size.height * 0.15,
+                                    enlargeCenterPage: true,
+                                    enlargeFactor: 0.15,
+                                    viewportFraction: 0.28,
+                                  ),
                                 ),
-                              ),
-                              Gap(10),
-                              NextPrayerTimer(timeRemaining: prayerCountDown[prayerTimes.keys.first],),
-                            ],
+                                Gap(10),
+                                NextPrayerTimer(timeRemaining: prayerCountDown[prayerTimes.keys.first],),
+                              ],
+                            ),
                           ),
                         ],
                       ),

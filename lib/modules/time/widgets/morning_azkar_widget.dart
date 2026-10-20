@@ -20,7 +20,7 @@ class MorningAzkarWidget extends StatelessWidget {
       },
       child: Container(
         width: size.width * 0.45 ,
-        height: size.height * 0.27,
+        height: size.height * 0.28,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: AppColor.black,
@@ -29,7 +29,7 @@ class MorningAzkarWidget extends StatelessWidget {
         child: Column(
           children: [
             Assets.images.morningAzkarImg.image(fit: BoxFit.cover,width: 185,height: 185),
-            Text('Morning Azkar',style: them.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700,color: AppColor.white)),
+            Expanded(child: Text('Morning Azkar',style: them.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700,color: AppColor.white))),
           ],
         ),
       ),
