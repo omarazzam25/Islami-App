@@ -11,8 +11,6 @@ A Flutter mobile application designed to bring useful Islamic features together 
 - 📿 **Tasbeeh** — Keep track of Tasbeeh counts.
 - 📻 **Islamic Radio** — Listen to Islamic radio streams.
 - 🎙️ **Hadith** — View Hadith content.
-- 🧭 **Qibla Direction** — Find the direction of the Qibla.
-- 🎨 **Light & Dark Themes** — Switch the app's appearance, if enabled in the current build.
 - 📱 **Responsive UI** — Layouts designed for different screen sizes.
 - 👋 **Onboarding** — Introductory screens for new users.
 
